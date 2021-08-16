@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/logo"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/anim_refreshing"
+        android:translationY="0dp" />
+</LinearLayout>

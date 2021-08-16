@@ -1,0 +1,52 @@
+ext {
+    android = [
+            compileSdk   : 31,
+            applicationId: "com.zj.android",
+            minSdk       : 21,
+            targetSdk    : 31,
+            versionCode  : 1,
+            versionName  : "1.0",
+    ]
+    version = [
+            core_ktx         : "1.3.2",
+            appcompat        : "1.2.0",
+            material         : "1.3.0",
+            constraintlayout : "2.0.4",
+            junit            : "4.13.2",
+            testJunit        : "1.1.2",
+            espresso_core    : "3.3.0",
+            lifecycle_version: "2.3.1",
+            status_bar_util  : "1.5.1",
+            databinding      : "7.0.0",
+            coroutines       : "1.4.3",
+            retrofit         : "2.9.0",
+            interceptor      : "5.0.0-alpha.2",
+            paging           : "3.0.0",
+            smart_refresh    : "2.0.3",
+
+
+    ]
+    dependencies = [
+            core_ktx               : "androidx.core:core-ktx:${version['core_ktx']}",
+            appcompat              : "androidx.appcompat:appcompat:${version['appcompat']}",
+            material               : "com.google.android.material:material:${version['material']}",
+            constraintlayout       : "androidx.constraintlayout:constraintlayout:${version['constraintlayout']}",
+            junit                  : "junit:junit:${version['junit']}",
+            test_junit             : "androidx.test.ext:junit:${version['testJunit']}",
+            espresso_core          : "androidx.test.espresso:espresso-core:${version['espresso_core']}",
+            lifecycle_viewmodel_ktx: "androidx.lifecycle:lifecycle-viewmodel-ktx:${version['lifecycle_version']}",
+            lifecycle_livedata_ktx : "androidx.lifecycle:lifecycle-livedata-ktx:${version['lifecycle_version']}",
+            lifecycle_runtime_ktx  : "androidx.lifecycle:lifecycle-runtime-ktx:${version['lifecycle_version']}",
+            status_bar_util        : "com.jaeger.statusbarutil:library:${version['status_bar_util']}",
+            databinding            : "com.android.databinding:compiler:${version['databinding']}",
+            coroutines_android     : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${version['coroutines']}",
+            coroutines_core        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${version['coroutines']}",
+            retrofit               : "com.squareup.retrofit2:retrofit:${version['retrofit']}",
+            converter_gson         : "com.squareup.retrofit2:converter-gson:${version['retrofit']}",
+            interceptor            : "com.squareup.okhttp3:logging-interceptor:${version['interceptor']}",
+            paging                 : "androidx.paging:paging-runtime-ktx:${version['paging']}",
+            smart_refresh          : "com.scwang.smart:refresh-layout-kernel:${version['smart_refresh']}",
+
+
+    ]
+}
