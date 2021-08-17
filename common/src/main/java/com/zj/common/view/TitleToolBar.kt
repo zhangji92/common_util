@@ -2,10 +2,13 @@ package com.zj.common.view
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
+import androidx.annotation.Dimension
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import com.zj.common.R
@@ -89,7 +92,7 @@ class TitleToolBar(context: Context, attrs: AttributeSet) : LinearLayout(context
         // 右侧图片
         val rightImg = typedArray.getDrawable(R.styleable.title_tool_bar_rightImg)
         binding.rightImg.setImageDrawable(rightImg)
-        
+
         // 返回键点击时间
         binding.back.setOnClickListener {
             if (leftOnClickListener == null) {
@@ -107,6 +110,76 @@ class TitleToolBar(context: Context, attrs: AttributeSet) : LinearLayout(context
             rightTextOnClickListener?.onClick(it)
         }
 
+    }
+
+    /**
+     * 设置左右间距
+     */
+    fun setPadding(padding: Int) {
+        binding.padding = padding
+    }
+
+    /**
+     * 设置左侧图标
+     */
+    fun setLeftImg(drawable: Drawable) {
+        binding.leftImg = drawable
+    }
+
+    /*
+     * @title 标题文字
+     */
+    fun setTitle(title: String) {
+        binding.title.text = title
+    }
+
+    /**
+     * 主题字体大小
+     */
+    fun setTitleSize(titleSize: Float) {
+        binding.title.textSize = titleSize
+    }
+
+    /**
+     * 主题字体颜色
+     */
+    fun setTitleColor(color: Int) {
+        binding.title.setTextColor(color)
+    }
+
+    /**
+     * 设置右侧图片
+     */
+    fun setRightImg(drawable: Drawable) {
+        binding.rightImg.setImageDrawable(drawable)
+    }
+
+    /**
+     * 设置右侧字体
+     */
+    fun setRightText(rightText: String) {
+        binding.rightText.text = rightText
+    }
+
+    /**
+     * 设置右侧文字颜色
+     */
+    fun setNavTextColor(color: Int) {
+        binding.rightText.setTextColor(color)
+    }
+
+    /**
+     * 设置右侧文字大小
+     */
+    fun setNavTextSize(size: Float) {
+        binding.rightText.textSize = size
+    }
+
+    /**
+     * 设置右侧文字图标
+     */
+    fun setLeftBounds(left: Drawable?, top: Drawable?, right: Drawable?, bottom: Drawable?) {
+        binding.rightText.setCompoundDrawablesWithIntrinsicBounds(left, top, right, bottom)
     }
 
 

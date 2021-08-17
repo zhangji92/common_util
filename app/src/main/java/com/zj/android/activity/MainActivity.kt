@@ -15,7 +15,6 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
 
     override fun initData(savedInstanceState: Bundle?) {
 
-
     }
 
     override fun variableId(): Int {
